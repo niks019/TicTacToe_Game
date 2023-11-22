@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}Feedback{% endblock title %}
+
+{% block body %}
+<style>
+    .nps{
+        height:65px;
+        width:65px;
+        border: 1px solid black;
+        border-radius: 50%;
+        font-size: 22px;
+    }
+    .nps1, .nps2, .nps3, .nps4{
+        background: red;
+    }  
+    .nps5, .nps6, .nps7, .nps8, .nps9, .nps10{
+        background: orange;
+    }
+    .nps9, .nps10{
+        background: green;
+    }
+    .npsname{
+        font-size: 22px;
+        color: brown;
+        font-weight: bold;
+    }
+</style>
+<div class="container">
+<h3 class="text-center my-4">Survey</h3>
+<p>Please take a moment to fill out this form.</p>
+<p>How likely are you to recommend our product to a friend or colleague.</p>
+<form class="" method="POST" action="/asubmit">
+    {% csrf_token %}
+    <div class="d-flex flex-row mb-3">
+        <div class="npsname py-3 px-1">Very unlikely</div>
+        <div class="text-center nps nps1 p-2 mx-1">
+            <label for="first_select">1</label>
+            <input id="one" name="choose" type="radio" value="1" required>            
+        </div>
+        <div class="text-center nps nps2 p-2 mx-1">
+            <label for="second_select">2</label>
+            <input id="2" name="choose" type="radio" value="2" required>
+        </div>
+        <div class="text-center nps nps3 p-2 mx-1">
+            <label for="third_select">3</label>
+            <input id="3" name="choose" type="radio" value="3" required>
+        </div>
+        <div class="text-center nps nps4 p-2 mx-1">
+            <label for="fourth_select">4</label>
+            <input id="4" name="choose" type="radio" value="4" required>
+        </div>
+        <div class="text-center nps nps5 p-2 mx-1">
+            <label for="fifth_select">5</label>
+            <input id="5" name="choose" type="radio" value="5" required>
+        </div>
+        <div class="text-center nps nps6 p-2 mx-1">
+            <label for="sixth_select">6</label>
+            <input id="6" name="choose" type="radio" value="6" required>
+        </div>
+        <div class="text-center nps nps7 p-2 mx-1">
+            <label for="seventh_select">7</label>
+            <input id="7" name="choose" type="radio" value="7" required>
+        </div>
+        <div class="text-center nps nps8 p-2 mx-1">
+            <label for="eighth_select">8</label>
+            <input id="8" name="choose" type="radio" value="8" required>
+        </div>
+        <div class="text-center nps nps9 p-2 mx-1">
+            <label for="ninth_select">9</label>
+            <input id="9" name="choose" type="radio" value="9" required>
+        </div>
+        <div class="text-center nps nps10 p-2 mx-1">
+            <label for="tenth_select">10</label>
+            <input id="10" name="choose" type="radio" value="10" required>
+        </div>
+        <div class="npsname py-3 px-1">Very likely</div>
+      </div>
+    
+    <label for="floatingTextArea">Please share your feedback:</label>
+    <textarea name='feed_text' class="form-control" placeholder="Write here...(100 characters)" id="floatingTextarea" maxlength="100" Required></textarea>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<footer>
+    <div class="text-center bg-primary py-2 footer" id="footer1">2023 | &copy; Niks</div>
+</footer>
+{% endblock body %}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Play{% endblock title %}
+
+{% block body %}
+<style>
+    .gifs{
+        height: 200px;
+        width: 200px
+    }
+</style>
+<div class="my-0">
+    <div class="p-5 text-center bg-body-tertiary">
+        <div class="container py-5">
+            <h1 class="text-body-emphasis">Welcome to the Tic Tac Toe Game!</h1>
+            <p class="col-lg-8 mx-auto lead">
+                Game started
+            </p>
+            <div class="player1">Player 1</div>
+            <div class="player2">Player 2</div>
+            <table>
+                <tr>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+            </table>
+            <div class="container">
+                <img class="gifs" src="static/images/celebrate.gif">
+            </div>
+            <button class="btn btn-primary my-4" id="reset">Restart</button>
+            <p>Hope you enjoyed the game! Please provide your valuable feedback by clicking below.</p>
+            <div>
+                <a href="/feed-back"><button class="btn btn-success my-4">Feedback</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="text-center bg-primary py-2 footer" id="footer2">2023 | &copy; Niks</div>
+</footer>
+{% endblock body %}

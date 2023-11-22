@@ -1,0 +1,53 @@
+img{
+    height: 25px;
+    width: 25px;
+    position: relative;
+    bottom: 3px;
+}
+
+#footer1{
+    position: fixed;
+}
+
+#footer2{
+    position: relative;
+}
+
+.footer{
+    bottom: 0px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+}
+
+td{
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, td{    
+    border-width: 5px !important;
+}
+
+.player1{
+    float: left;
+    position: relative;
+    left: 200px;
+}
+
+.player2{
+    float: right;
+    position: relative;
+    right: 200px;
+}
+
+.player1, .player2{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
